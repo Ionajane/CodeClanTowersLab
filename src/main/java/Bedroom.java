@@ -25,8 +25,12 @@ public class Bedroom {
     }
 
     public void checkIn(Guest guest) {
-        if (guests.size() < capacity)
-        this.guests.add(guest);
+        if (guests.size() < capacity) {
+            this.guests.add(guest);
+        } else {
+            System.out.println("Room is full");
+        }
+
     }
 
     public void checkOut(Guest guest, int numberOfNights) {
