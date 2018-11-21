@@ -5,6 +5,14 @@ import static org.junit.Assert.assertEquals;
 
 public class GuestTest {
 
+    Guest guest;
+
+    @Before
+    public void before() {
+        guest = new Guest();
+    }
+
+
 
 }
 

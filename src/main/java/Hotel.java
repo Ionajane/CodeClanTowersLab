@@ -65,7 +65,15 @@ public class Hotel {
         return booking;
     }
 
-
-
+    public int findEmptyBedrooms(){
+        int numberOfEmptyRooms = 0;
+        for (int i = 0; i < bedrooms.size(); i++){
+            Bedroom bedroom = bedrooms.get(i);
+            if (bedroom.checkIfOccupied() == 0) {
+                numberOfEmptyRooms += 1;
+            }
+        }
+        return numberOfEmptyRooms;
+    }
 
 }

@@ -118,4 +118,20 @@ public class HotelTest {
         assertEquals(3, actualBooking.getNumberOfNights());
         assertEquals(guest, actualBooking.getGuest());
     }
+
+    @Test
+    public void canLookForAllEmptyBedrooms(){
+        assertEquals(4, hotel.findEmptyBedrooms());
+    }
+
+    @Test
+    public void cannotCheckInIfBedroomFull() {
+        hotel.checkInGuestBedroom(guest, bedroom2);
+        hotel.checkInGuestBedroom(guest, bedroom2);
+        assertEquals(1, bedroom2.checkIfOccupied());
+    }
+
+
+
+
 }
